@@ -1,20 +1,15 @@
-import React, { Component } from "react";
-
-import ToDoItem from "../ToDoItem/ToDoItem"
+import React from "react";
+import ToDoItem from "../ToDoItem/ToDoItem";
+import toDoData from "../../toDoList";
 
 import "./ToDoList.css";
 
-class ToDoList extends Component {
-  render() {
-    return (
-      <div className="todo-list">
-        <ToDoItem />
-        <ToDoItem />
-        <ToDoItem />
-        <ToDoItem />
-      </div>
-    );
-  }
+function ToDoList() {
+  const ToDoListComponents = toDoData.map(task => (
+    <ToDoItem key={task.id} task={task} />
+  ));
+
+  return <div className="todo-list">{ToDoListComponents}</div>;
 }
 
 export default ToDoList;

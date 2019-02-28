@@ -1,0 +1,15 @@
+.body{
+    margin: 0;
+}
+
+.footer {
+    height: 50px;
+    background-color:lightgray;
+    color:black;
+    margin-top: 15px;
+    text-align: center;
+    font-size:15px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
